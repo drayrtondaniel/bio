@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Ayrton Daniel | Links</title>
-    <!-- Ícones do FontAwesome para WhatsApp, YouTube, TikTok e Instagram -->
+    <!-- Ícones do FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -35,32 +35,46 @@
             max-width: 440px;
         }
 
+        /* Estilo do Header com a foto em retrato */
+        .profile-header {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
         .avatar-container {
-            position: relative;
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 15px auto;
+            width: 100%;
+            max-height: 220px; /* Altura ideal para foto em retrato */
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0f172a;
         }
 
         .avatar {
             width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 3px solid var(--accent-color);
+            height: auto;
+            max-height: 220px;
             object-fit: cover;
-            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+            object-position: center top; /* Garante que o rosto apareça bem enquadrado */
         }
 
         h1 {
             font-size: 1.4rem;
-            margin-bottom: 5px;
+            margin: 0 0 5px 0;
             font-weight: 600;
         }
 
         .crm {
             font-size: 0.8rem;
             color: var(--accent-color);
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
@@ -69,11 +83,11 @@
         p.bio {
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-bottom: 25px;
+            margin: 0;
             line-height: 1.4;
-            padding: 0 10px;
         }
 
+        /* Estilo dos Botões de Links */
         .link-button {
             display: flex;
             align-items: center;
@@ -121,6 +135,7 @@
             border-color: #34d399;
         }
 
+        /* Ícones Sociais Rodapé */
         .social-icons {
             display: flex;
             justify-content: center;
@@ -160,16 +175,18 @@
 <body>
 
     <div class="container">
-        <!-- Foto puxada diretamente da raiz do repositório -->
-        <div class="avatar-container">
-            <img src="dr_ayrton.png" alt="Dr. Ayrton Daniel" class="avatar">
-        </div>
         
-        <h1>Dr. Ayrton Daniel</h1>
-        <div class="crm">CRM-SP 123.456 • RQE 45.678</div>
-        <p class="bio">Obstetrícia humanizada com evidências científicas e acolhimento integrativo.</p>
+        <!-- Header com Foto Retrato e Informações do Dr. -->
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img src="dr_ayrton.png" alt="Dr. Ayrton Daniel" class="avatar">
+            </div>
+            <h1>Dr. Ayrton Daniel</h1>
+            <div class="crm">CRM-SP 123.456 • RQE 45.678</div>
+            <p class="bio">Obstetrícia humanizada com evidências científicas e acolhimento integrativo.</p>
+        </div>
 
-        <!-- Links Principais dos Sites -->
+        <!-- Links Principais -->
         <a href="https://drayrtondaniel.github.io/circulo-nascer/" class="link-button" target="_blank">
             <i class="fa-solid fa-circle-nodes"></i>
             <span>Círculo Nascer (Consultoria Obstétrica)</span>
@@ -182,8 +199,8 @@
             <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
         </a>
 
-        <!-- Link Direto para WhatsApp -->
-        <a href="https://wa.me/5519999999999?text=Olá%20Dr.%20Ayrton,%20vim%20através%20do%20link%20na%20bio." class="link-button whatsapp" target="_blank">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5519991465431?text=Olá%20Dr.%20Ayrton,%20vim%20através%20do%20link%20na%20bio." class="link-button whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
             <span>Fale Comigo no WhatsApp</span>
             <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
@@ -191,14 +208,11 @@
 
         <!-- Redes Sociais -->
         <div class="social-icons">
-            <a href="https://youtube.com/@seucanal" class="social-icon-btn" target="_blank" title="YouTube">
+            <a href="https://www.youtube.com/@DrAyrtonDaniel" class="social-icon-btn" target="_blank" title="YouTube">
                 <i class="fa-brands fa-youtube"></i>
             </a>
-            <a href="https://tiktok.com/@seuperfil" class="social-icon-btn" target="_blank" title="TikTok">
+            <a href="https://www.tiktok.com/@dr.ayrtondaniel" class="social-icon-btn" target="_blank" title="TikTok">
                 <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="https://instagram.com/seuperfil" class="social-icon-btn" target="_blank" title="Instagram">
-                <i class="fa-brands fa-instagram"></i>
             </a>
         </div>
 
