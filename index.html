@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ayrton Daniel | Links</title>
+    <!-- Ícones do FontAwesome para WhatsApp, YouTube e TikTok -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1322;
+            --card-bg: #172033;
+            --card-hover: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 440px;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px auto;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .crm {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        p.bio {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            padding: 14px 20px;
+            margin-bottom: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .link-button i {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .link-button span {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .link-button:hover {
+            background-color: var(--card-hover);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+        }
+
+        /* Destaque especial para o WhatsApp */
+        .link-button.whatsapp {
+            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            border-color: #059669;
+        }
+        .link-button.whatsapp i {
+            color: #34d399;
+        }
+        .link-button.whatsapp:hover {
+            background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+            border-color: #34d399;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 35px;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Foto oficial extraída dos sites institucionais -->
+        <div class="avatar-container">
+            <img src="https://drayrtondaniel.github.io/circulo-nascer/images/dr-ayrton.png" alt="Dr. Ayrton Daniel" class="avatar">
+        </div>
+        
+        <h1>Dr. Ayrton Daniel</h1>
+        <div class="crm">CRM-SP 123.456 • RQE 45.678</div>
+        <p class="bio">Obstetrícia humanizada com evidências científicas e acolhimento integrativo.</p>
+
+        <!-- Links Principais dos Sites -->
+        <a href="https://drayrtondaniel.github.io/circulo-nascer/" class="link-button" target="_blank">
+            <i class="fa-solid fa-circle-nodes"></i>
+            <span>Círculo Nascer (Consultoria Obstétrica)</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        </a>
+
+        <a href="https://drayrtondaniel.github.io/curso-para-gestantes/" class="link-button" target="_blank">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Curso para Gestantes</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        </a>
+
+        <!-- Link Direto para WhatsApp -->
+        <a href="https://wa.me/5519999999999?text=Olá%20Dr.%20Ayrton,%20vim%20através%20do%20link%20na%20bio." class="link-button whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Fale Comigo no WhatsApp</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        </a>
+
+        <!-- Redes Sociais (YouTube e TikTok) -->
+        <div class="social-icons">
+            <a href="https://youtube.com/@seucanal" class="social-icon-btn" target="_blank" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://tiktok.com/@seuperfil" class="social-icon-btn" target="_blank" title="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://instagram.com/seuperfil" class="social-icon-btn" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <footer>
+            © 2026 Dr. Ayrton Daniel • Todos os direitos reservados
+        </footer>
+    </div>
+
+</body>
+</html>
