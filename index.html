@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Ayrton Daniel | Links</title>
-    <!-- Ícones do FontAwesome -->
+    <!-- Ícones FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #0d1322;
-            --card-bg: #172033;
-            --card-hover: #1e293b;
-            --accent-color: #38bdf8;
-            --text-main: #f8fafc;
+            /* Cores inspiradas diretamente na identidade sóbria do Círculo Nascer */
+            --bg-color: #0b1120;
+            --card-bg: #151d30;
+            --card-hover: #1c2740;
+            --accent-soft: #38bdf8;
+            --accent-muted: #7dd3fc;
+            --text-main: #f1f5f9;
             --text-muted: #94a3b8;
-            --border-color: #334155;
+            --border-color: #26334d;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             display: flex;
@@ -26,55 +32,54 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 24px 16px;
         }
 
         .container {
             text-align: center;
             width: 100%;
-            max-width: 440px;
+            max-width: 420px;
         }
 
-        /* Estilo do Header com a foto em retrato */
+        /* Cartão de Perfil */
         .profile-header {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 20px;
             padding: 24px 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
         }
 
+        /* Container da Imagem sem cortá-la */
         .avatar-container {
             width: 100%;
-            max-height: 220px; /* Altura ideal para foto em retrato */
+            max-width: 280px;
+            margin: 0 auto 20px auto;
+            border-radius: 14px;
             overflow: hidden;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0f172a;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .avatar {
             width: 100%;
             height: auto;
-            max-height: 220px;
-            object-fit: cover;
-            object-position: center top; /* Garante que o rosto apareça bem enquadrado */
+            display: block;
+            object-fit: contain; /* Exibe a foto inteira sem cortar */
         }
 
         h1 {
-            font-size: 1.4rem;
-            margin: 0 0 5px 0;
+            font-size: 1.35rem;
+            margin: 0 0 6px 0;
             font-weight: 600;
+            letter-spacing: -0.3px;
         }
 
         .crm {
-            font-size: 0.8rem;
-            color: var(--accent-color);
-            margin-bottom: 8px;
+            font-size: 0.78rem;
+            color: var(--accent-muted);
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
@@ -82,91 +87,100 @@
 
         p.bio {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.45;
         }
 
-        /* Estilo dos Botões de Links */
+        /* Botões de Ação */
         .link-button {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: var(--card-bg);
             color: var(--text-main);
-            padding: 14px 20px;
-            margin-bottom: 14px;
-            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
+            font-size: 0.92rem;
+            transition: all 0.25s ease;
             border: 1px solid var(--border-color);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .link-button i {
-            font-size: 1.2rem;
-            color: var(--accent-color);
+        .link-button i.btn-icon {
+            font-size: 1.15rem;
+            color: var(--accent-soft);
+            width: 24px;
+            text-align: center;
         }
 
         .link-button span {
             flex-grow: 1;
             text-align: center;
+            padding: 0 10px;
+        }
+
+        .link-button .arrow-icon {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            opacity: 0.6;
         }
 
         .link-button:hover {
             background-color: var(--card-hover);
-            border-color: var(--accent-color);
+            border-color: #3b4d6e;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
 
-        /* Destaque especial para o WhatsApp */
+        /* Estilo Suave para o WhatsApp */
         .link-button.whatsapp {
-            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
-            border-color: #059669;
+            background-color: #112a23;
+            border-color: #1e4d3f;
+            color: #e2f8f0;
         }
-        .link-button.whatsapp i {
+        .link-button.whatsapp i.btn-icon {
             color: #34d399;
         }
         .link-button.whatsapp:hover {
-            background: linear-gradient(135deg, #047857 0%, #065f46 100%);
-            border-color: #34d399;
+            background-color: #16382f;
+            border-color: #2e6b58;
         }
 
-        /* Ícones Sociais Rodapé */
+        /* Ícones Sociais no Rodapé */
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 25px;
+            gap: 14px;
+            margin-top: 22px;
         }
 
         .social-icon-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
+            width: 44px;
+            height: 44px;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 50%;
             color: var(--text-main);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
         }
 
         .social-icon-btn:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            border-color: var(--accent-color);
-            transform: translateY(-3px);
+            background-color: var(--card-hover);
+            color: var(--accent-soft);
+            border-color: var(--accent-soft);
+            transform: translateY(-2px);
         }
 
         footer {
-            margin-top: 35px;
+            margin-top: 30px;
             font-size: 0.75rem;
             color: #64748b;
         }
@@ -176,10 +190,11 @@
 
     <div class="container">
         
-        <!-- Header com Foto Retrato e Informações do Dr. -->
+        <!-- Cartão Superior do Médico -->
         <div class="profile-header">
             <div class="avatar-container">
-                <img src="dr_ayrton.png" alt="Dr. Ayrton Daniel" class="avatar">
+                <!-- Se salvar no repositório como JPG, use dr_ayrton.jpg abaixo -->
+                <img src="dr_ayrton.jpg" alt="Dr. Ayrton Daniel" class="avatar">
             </div>
             <h1>Dr. Ayrton Daniel</h1>
             <div class="crm">CRM-SP 123.456 • RQE 45.678</div>
@@ -188,25 +203,25 @@
 
         <!-- Links Principais -->
         <a href="https://drayrtondaniel.github.io/circulo-nascer/" class="link-button" target="_blank">
-            <i class="fa-solid fa-circle-nodes"></i>
+            <i class="fa-solid fa-circle-nodes btn-icon"></i>
             <span>Círculo Nascer (Consultoria Obstétrica)</span>
-            <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
         </a>
 
         <a href="https://drayrtondaniel.github.io/curso-para-gestantes/" class="link-button" target="_blank">
-            <i class="fa-solid fa-graduation-cap"></i>
+            <i class="fa-solid fa-graduation-cap btn-icon"></i>
             <span>Curso para Gestantes</span>
-            <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
         </a>
 
-        <!-- WhatsApp -->
+        <!-- Botão WhatsApp Suave -->
         <a href="https://wa.me/5519991465431?text=Olá%20Dr.%20Ayrton,%20vim%20através%20do%20link%20na%20bio." class="link-button whatsapp" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp btn-icon"></i>
             <span>Fale Comigo no WhatsApp</span>
-            <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
         </a>
 
-        <!-- Redes Sociais -->
+        <!-- Redes Sociais Secundárias -->
         <div class="social-icons">
             <a href="https://www.youtube.com/@DrAyrtonDaniel" class="social-icon-btn" target="_blank" title="YouTube">
                 <i class="fa-brands fa-youtube"></i>
