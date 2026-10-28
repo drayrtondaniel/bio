@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Cores inspiradas diretamente na identidade sóbria do Círculo Nascer */
+            /* Cores inspiradas na identidade do Círculo Nascer */
             --bg-color: #0b1120;
             --card-bg: #151d30;
             --card-hover: #1c2740;
@@ -51,22 +51,23 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
         }
 
-        /* Container da Imagem sem cortá-la */
+        /* Container da Imagem ajustado ao formato da foto */
         .avatar-container {
             width: 100%;
-            max-width: 280px;
+            max-width: 260px;
             margin: 0 auto 20px auto;
             border-radius: 14px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background-color: #0f172a;
         }
 
         .avatar {
             width: 100%;
             height: auto;
             display: block;
-            object-fit: contain; /* Exibe a foto inteira sem cortar */
+            object-fit: contain;
         }
 
         h1 {
@@ -193,8 +194,7 @@
         <!-- Cartão Superior do Médico -->
         <div class="profile-header">
             <div class="avatar-container">
-                <!-- Se salvar no repositório como JPG, use dr_ayrton.jpg abaixo -->
-                <img src="dr_ayrton.jpg" alt="Dr. Ayrton Daniel" class="avatar">
+                <img src="./dr_ayrton.jpg" alt="Dr. Ayrton Daniel" class="avatar">
             </div>
             <h1>Dr. Ayrton Daniel</h1>
             <div class="crm">CRM-SP 123.456 • RQE 45.678</div>
@@ -214,14 +214,14 @@
             <i class="fa-solid fa-chevron-right arrow-icon"></i>
         </a>
 
-        <!-- Botão WhatsApp Suave -->
+        <!-- Botão WhatsApp -->
         <a href="https://wa.me/5519991465431?text=Olá%20Dr.%20Ayrton,%20vim%20através%20do%20link%20na%20bio." class="link-button whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp btn-icon"></i>
             <span>Fale Comigo no WhatsApp</span>
             <i class="fa-solid fa-chevron-right arrow-icon"></i>
         </a>
 
-        <!-- Redes Sociais Secundárias -->
+        <!-- Redes Sociais -->
         <div class="social-icons">
             <a href="https://www.youtube.com/@DrAyrtonDaniel" class="social-icon-btn" target="_blank" title="YouTube">
                 <i class="fa-brands fa-youtube"></i>
